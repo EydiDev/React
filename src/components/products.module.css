@@ -1,0 +1,11 @@
+.prods{
+    display: flex;
+    justify-content: space-around;
+    background-color:#480CA8 ;
+
+}
+.pp{
+
+    width: 200px;
+    height: 600px;
+}

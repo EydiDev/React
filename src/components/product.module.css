@@ -1,0 +1,26 @@
+.mahsool img{
+    width: 70%;
+    
+
+}
+.mahsool{
+display: flex;
+justify-content: space-between;
+background-color: cornflowerblue;
+border-radius: 10px;
+overflow: hidden;
+margin: 10px;
+max-width: 600px;
+}
+.mahsool p,h2{
+    margin: 10px;
+}
+.proinf{
+    display: grid;
+    align-items: end;
+    align-content: space-between;
+    justify-items: end;
+}
+.mahsool img{
+width: 30%;
+}
