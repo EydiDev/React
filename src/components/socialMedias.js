@@ -6,16 +6,14 @@ import twitter from '../images/twitter.png'
 import styled from 'styled-components';
 
 const SocialMediasDiv =styled.div`
-background-color : mediumpurple ;
+background-color :${props => props.status ? "mediumpurple" : "purple"};
 width : 100%;
-height : 160px ;
+height : 200px ;
 display : flex ;
 flex-direction : column;
 justify-content : space-around;
 align-items : center;
- :hover{
-    background-color: rgb(187, 19, 187);  ;   
-        }
+
 
 `
 const iconDiv = styled.div`
@@ -33,20 +31,39 @@ const Imagee = styled.img`
     }
        
 `
+const Button = styled.button`
+    width : 60px;
+    height: 30px;
+    
+    
+`
 
 class socialMedias extends Component {
+    constructor() {
+        super();
+        this.state = {
+            status : true
+        }
+    }
     
+
+changeColor = ()=>{
+    this.setState({
+        status : !this.state.status
+    })
+}
+
         render() {
-       
         return (
             <div>
-                <SocialMediasDiv>
+                <SocialMediasDiv status={this.state.status}>
                     <h2>social medias</h2>
                 <iconDiv>
                    <a style={{marginLeft : "0px"}}  href={"#"}><Imagee  src={youtube} alt="sdf"/></a>
                    <a style={{marginLeft : "10px"}} href={"#"}><Imagee  src={instagram} alt="sdf"/></a>
                    <a style={{marginLeft : "10px"}} href={"#"}><Imagee  src={twitter} alt="sdf"/></a>
                     </iconDiv>
+                    <Button onClick={this.changeColor}>change</Button>
                 </SocialMediasDiv>
             </div>
         );
