@@ -7,7 +7,7 @@ class search extends Component {
         width : "100%",
         height:"160px",
         display : "flex",
-        justifyContent : "space-around" ,
+        justifyContent : "center" ,
         alignItems:"center"    ,
        
         ":hover":{

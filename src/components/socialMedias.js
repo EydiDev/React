@@ -40,9 +40,9 @@ class socialMedias extends Component {
                 <SocialMediasDiv>
                     <h2>social medias</h2>
                 <iconDiv>
-                   <a style={{marginLeft : "7px"}}  href={"#"}><Imagee  src={youtube} alt="sdf"/></a>
-                   <a style={{marginLeft : "7px"}} href={"#"}><Imagee  src={instagram} alt="sdf"/></a>
-                   <a style={{marginLeft : "7px"}} href={"#"}><Imagee  src={twitter} alt="sdf"/></a>
+                   <a style={{marginLeft : "0px"}}  href={"#"}><Imagee  src={youtube} alt="sdf"/></a>
+                   <a style={{marginLeft : "10px"}} href={"#"}><Imagee  src={instagram} alt="sdf"/></a>
+                   <a style={{marginLeft : "10px"}} href={"#"}><Imagee  src={twitter} alt="sdf"/></a>
                     </iconDiv>
                 </SocialMediasDiv>
             </div>
