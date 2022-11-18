@@ -5,7 +5,7 @@ import instagram from '../images/instagram.webp'
 import twitter from '../images/twitter.png'
 import styled from 'styled-components';
 
-const SocialMediasDiv =styled.div`
+const SocialMediasDiv = styled.div`
 background-color :${props => props.status ? "mediumpurple" : "purple"};
 width : 100%;
 height : 200px ;
@@ -42,26 +42,26 @@ class socialMedias extends Component {
     constructor() {
         super();
         this.state = {
-            status : true
+            status: true
         }
     }
-    
 
-changeColor = ()=>{
-    this.setState({
-        status : !this.state.status
-    })
-}
 
-        render() {
+    changeColor = () => {
+        this.setState({
+            status: !this.state.status
+        })
+    }
+
+    render() {
         return (
             <div>
                 <SocialMediasDiv status={this.state.status}>
                     <h2>social medias</h2>
-                <iconDiv>
-                   <a style={{marginLeft : "0px"}}  href={"#"}><Imagee  src={youtube} alt="sdf"/></a>
-                   <a style={{marginLeft : "10px"}} href={"#"}><Imagee  src={instagram} alt="sdf"/></a>
-                   <a style={{marginLeft : "10px"}} href={"#"}><Imagee  src={twitter} alt="sdf"/></a>
+                    <iconDiv>
+                        <a style={{ marginLeft: "0px" }} href={"#"}><Imagee src={youtube} alt="sdf" /></a>
+                        <a style={{ marginLeft: "10px" }} href={"#"}><Imagee src={instagram} alt="sdf" /></a>
+                        <a style={{ marginLeft: "10px" }} href={"#"}><Imagee src={twitter} alt="sdf" /></a>
                     </iconDiv>
                     <Button onClick={this.changeColor}>change</Button>
                 </SocialMediasDiv>
