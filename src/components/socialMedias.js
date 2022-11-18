@@ -13,7 +13,9 @@ display : flex ;
 flex-direction : column;
 justify-content : space-around;
 align-items : center;
-
+ :hover{
+    background-color: rgb(187, 19, 187);  ;   
+        }
 
 `
 const iconDiv = styled.div`
@@ -29,6 +31,7 @@ const Imagee = styled.img`
         width : 30px ; 
         height :30px ; 
     }
+       
 `
 
 class socialMedias extends Component {
