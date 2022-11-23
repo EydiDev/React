@@ -1,0 +1,50 @@
+.inp { 
+    width: 200px;
+    height: 30px;
+    border-radius: 50px;
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(127, 203, 205);
+    box-shadow: 0px 0px 20px rgb(39, 79, 81);
+    font-family:fantasy;
+    
+}
+.p{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(127, 203, 205);
+    box-shadow: 0px 0px 20px rgb(39, 79, 81);
+    font-family:fantasy;
+    border-radius: 50px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+}
+.btn {
+    
+        width: 100px;
+        height: 30px;
+        background-color: rgb(127, 203, 205);
+        box-shadow: 0px 0px 20px rgb(39, 79, 81);
+        font-family:fantasy;
+        border-radius: 50px;
+        border: 2px solid black;
+        text-align: center;
+        padding: 5px;
+    
+}
+.btn:hover{
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+.slct{
+    width: 50px;
+    height: 30px;
+    background-color: rgb(127, 203, 205);
+    box-shadow: 0px 0px 20px rgb(39, 79, 81);
+    font-family:fantasy;
+    border-radius: 50px;
+    border: 2px solid black;
+    text-align: center;
+}
