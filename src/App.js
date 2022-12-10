@@ -11,7 +11,9 @@ const divStyle = {
     gap: "10px",
   backgroundColor: "#2196F3",
   padding: "10px",
-  width : "fit-content"
+  width : "100%",
+
+  
 }
 
 
