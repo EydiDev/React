@@ -3,6 +3,7 @@ import axios from "axios";
 import Get from './Get';
 import Post from './post';
 import AxiosGet from './axiosGet';
+import AxiosPost from './axiosPost';
 
 
 
@@ -28,6 +29,7 @@ class App extends Component {
       <Post />
       <h1>axios get</h1>
       {this.state.posts.map((posts) => <AxiosGet key={posts.id} id={posts.id} title={posts.title} body = {posts.body}/>)}
+      <AxiosPost />
       </div>
     );
   }

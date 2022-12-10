@@ -15,10 +15,7 @@ class post extends Component {
             lnValue : "",
             mailValue : ""
         })
-        this.fn= React.createRef();
-        this.ln= React.createRef();
-        this.gmail= React.createRef();
-   
+     
     }
     fnchangeHandler = (e)=>{
         this.setState({
@@ -39,9 +36,9 @@ sendData = () =>{
         method :"POST",
         body : JSON.stringify({
             "userId": 10,
-            "firstName": this.fn.current.value,
-            "lastName": this.ln.current.value,
-            "email" : this.gmail.current.value,
+            "firstName": this.state.fnValue,
+            "lastName": this.state.lnValue,
+            "email" : this.state.mailValue,
             
     }),
     headers:{
@@ -57,11 +54,11 @@ sendData = () =>{
         return (
             <div style={Div}> 
                 enter your name :  
-                <input  ref={this.fn} type="text" value={this.state.fnValue} onChange={this.fnchangeHandler}/>
+                <input   type="text" value={this.state.fnValue} onChange={this.fnchangeHandler}/>
                 enter your last name : 
-                <input ref={this.ln} type="text"  value={this.state.lnValue} onChange={this.lnchangeHandler}/>
+                <input  type="text"  value={this.state.lnValue} onChange={this.lnchangeHandler}/>
                 enter your gmail : 
-                <input ref={this.gmail} type="text"  value={this.state.mailValue} onChange={this.mailChangeHandler}/>
+                <input  type="text"  value={this.state.mailValue} onChange={this.mailChangeHandler}/>
                 <button onClick={this.sendData}>send</button>
             </div>
         );

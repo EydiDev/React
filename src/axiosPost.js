@@ -1,4 +1,5 @@
 import React, { Component, createRef } from 'react';
+import axios from 'axios';
 const Div =  {
     display: 'flex',
 alignItems: 'center',
@@ -7,7 +8,7 @@ margin: '20px 0',
 height: '400px',
 justifyContent: 'space-evenly'
 }
-class post extends Component {
+class axiosPost extends Component {
     constructor(props) {
         super(props);
         this.state = ({
@@ -34,22 +35,18 @@ class post extends Component {
         })
     }
 sendData = () =>{
+
+    const {fnValue , lnValue , mailValue} = this.state;
+    const boody = {
+        "userId": 10,
+            "firstName": fnValue,
+            "lastName": lnValue,
+            "email" : mailValue,
+    }
     console.log("Clicked");
-    fetch("https://dummyjson.com/users/add",{
-        method :"POST",
-        body : JSON.stringify({
-            "userId": 10,
-            "firstName": this.fn.current.value,
-            "lastName": this.ln.current.value,
-            "email" : this.gmail.current.value,
-            
-    }),
-    headers:{
-        'Content-type' : 'application/json ; charset=UTF-8'
-    },
-})
-.then((response) => response.json())
-.then((json) => console.log(json));
+    axios.post("https://dummyjson.com/users/add", boody )
+.then((response) => console.log(response.data))
+
 // console.log();
 }
 
@@ -68,4 +65,4 @@ sendData = () =>{
     }
 }
 
-export default post;
+export default axiosPost;

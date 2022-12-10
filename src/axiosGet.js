@@ -15,11 +15,11 @@ class axiosGet extends Component {
         }))}
 
 render() {
-    const {key , id , title , body } = this.props;
+    const { id , title , body } = this.props;
     return (
        <div>
    
-          <div key={key}>
+          <div >
             <h2>{id}</h2>
             <h3>{title}</h3>
             <br />
