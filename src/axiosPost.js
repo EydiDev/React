@@ -1,12 +1,16 @@
 import React, { Component, createRef } from 'react';
 import axios from 'axios';
+
+
+
 const Div =  {
     display: 'flex',
 alignItems: 'center',
 flexDirection: 'column',
 margin: '20px 0',
 height: '400px',
-justifyContent: 'space-evenly'
+justifyContent: 'space-evenly',
+gridColumn: "2",
 }
 class axiosPost extends Component {
     constructor(props) {

@@ -5,7 +5,14 @@ import Post from './post';
 import AxiosGet from './axiosGet';
 import AxiosPost from './axiosPost';
 
-
+const divStyle = {
+  display: "grid",
+  gridTemplateColumns: "auto auto auto ",
+    gap: "10px",
+  backgroundColor: "#2196F3",
+  padding: "10px",
+  width : "fit-content"
+}
 
 
 class App extends Component {
@@ -24,12 +31,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div >
         <Get  />
       <Post />
       <h1>axios get</h1>
-      {this.state.posts.map((posts) => <AxiosGet key={posts.id} id={posts.id} title={posts.title} body = {posts.body}/>)}
+      <div style={divStyle}>
+      {this.state.posts.map((posts) => <AxiosGet  key={posts.id} id={posts.id} title={posts.title} body = {posts.body}/>)}
       <AxiosPost />
+      </div>
       </div>
     );
   }

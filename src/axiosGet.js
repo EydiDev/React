@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
+
+const postsDiv = {
+  width : "300px"
+}
 class axiosGet extends Component {
   constructor(props) {
     super(props);
@@ -17,9 +21,9 @@ class axiosGet extends Component {
 render() {
     const { id , title , body } = this.props;
     return (
-       <div>
+     
    
-          <div >
+          <div style={postsDiv}>
             <h2>{id}</h2>
             <h3>{title}</h3>
             <br />
@@ -29,7 +33,7 @@ render() {
             <br />
           </div>
         
-      </div>
+     
     );
   }
 }
